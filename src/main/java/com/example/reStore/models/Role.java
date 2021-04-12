@@ -19,4 +19,5 @@ public class Role {
 
     @OneToMany (mappedBy="role", fetch=FetchType.EAGER)
     private Collection<User> colleagues;
+
 }

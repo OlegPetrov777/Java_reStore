@@ -29,4 +29,5 @@ public class UserProfile {
 
     @OneToOne (fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "userProfile")
     private User user;
+
 }

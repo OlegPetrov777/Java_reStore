@@ -22,4 +22,5 @@ public class Manufacturer {
 
     @OneToMany (mappedBy="manufacturer", fetch=FetchType.EAGER)
     private Collection<Model> models;
+
 }
