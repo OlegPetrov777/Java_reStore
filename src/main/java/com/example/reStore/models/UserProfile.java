@@ -9,10 +9,13 @@ import java.time.LocalDate;
 @Entity
 @Data
 @NoArgsConstructor
+@Table(name = "user_profile")
 public class UserProfile {
     @Id
-    @OneToOne(targetEntity = User.class)
-    private User user;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+//    @OneToOne(targetEntity = User.class)
+//    private User user;
 
     private String first_name;
     private String last_name;

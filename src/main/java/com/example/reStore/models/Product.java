@@ -7,9 +7,11 @@ import javax.persistence.*;
 @Entity
 @Data
 @NoArgsConstructor
+@Table(name = "products")
 public class Product { //extends Model
     @Id
-    private Integer product_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String color;
     private String size;
@@ -17,7 +19,7 @@ public class Product { //extends Model
     private Integer price;
     private Integer pieces_in_stock; // количество в наличии
 
-    @ManyToOne
-    private Model model;
+//    @ManyToOne
+//    private Model model;
 
 }

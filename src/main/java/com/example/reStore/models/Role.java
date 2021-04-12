@@ -8,10 +8,12 @@ import java.util.List;
 @Entity
 @Data
 @NoArgsConstructor
+@Table(name = "roles")
 public class Role {
     @Id
-    private Integer role_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String name;
-    @OneToMany(targetEntity = User.class)
-    private List users;
+//    @OneToMany(targetEntity = User.class)
+//    private List users;
 }

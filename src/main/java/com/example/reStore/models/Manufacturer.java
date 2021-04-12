@@ -2,19 +2,27 @@ package com.example.reStore.models;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.mapping.Set;
+
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Data
 @NoArgsConstructor
+@Table(name = "manufacturers")
 public class Manufacturer {
     @Id
-    private Integer manufacturer_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String name;
     private String country;
 
-    @OneToMany(targetEntity = Model.class)
-    private List models;
+
+//    @OneToMany(mappedBy = "manufacturer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    private Set models;
+
+//    @OneToMany(targetEntity = Model.class)
+//    private List models;
 }
