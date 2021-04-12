@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.mapping.Set;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.List;
 
 @Entity
@@ -19,10 +20,6 @@ public class Manufacturer {
     private String name;
     private String country;
 
-
-//    @OneToMany(mappedBy = "manufacturer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-//    private Set models;
-
-//    @OneToMany(targetEntity = Model.class)
-//    private List models;
+    @OneToMany (mappedBy="manufacturer", fetch=FetchType.EAGER)
+    private Collection<Model> models;
 }

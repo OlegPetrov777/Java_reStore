@@ -14,11 +14,10 @@ public class UserProfile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-//    @OneToOne(targetEntity = User.class)
-//    private User user;
 
     private String first_name;
     private String last_name;
+
     @JsonFormat(pattern = "dd.MM.yyyy")
     private LocalDate birthday;
 
@@ -28,4 +27,6 @@ public class UserProfile {
     private String floor;
     private String flat;
 
+    @OneToOne (fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "userProfile")
+    private User user;
 }

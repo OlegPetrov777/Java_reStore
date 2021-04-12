@@ -19,7 +19,8 @@ public class Product { //extends Model
     private Integer price;
     private Integer pieces_in_stock; // количество в наличии
 
-//    @ManyToOne
-//    private Model model;
+    @ManyToOne (optional=false, cascade=CascadeType.ALL)
+    @JoinColumn (name="model_id")
+    private Model model;
 
 }
