@@ -1,4 +1,4 @@
-package com.example.demo.models;
+package com.example.reStore.models;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

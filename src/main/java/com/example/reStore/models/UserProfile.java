@@ -1,4 +1,4 @@
-package com.example.demo.models;
+package com.example.reStore.models;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
